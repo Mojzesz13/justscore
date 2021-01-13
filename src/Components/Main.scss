@@ -1,0 +1,50 @@
+// body {
+//   scroll-behavior: smooth;
+// }
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  // .outer-wrapper {
+  //   width: 100vh;
+  //   height: 100vw;
+  //   transform: rotate(-90deg) translateX(-100vh);
+  //   transform-origin: top left;
+  //   overflow-y: scroll;
+  //   // overflow-x: hidden;
+  //   position: absolute;
+  //   scrollbar-width: none;
+  //   -ms-overflow-style: none;
+  //   scroll-behavior: smooth;
+  //   z-index: 1;
+  //   ::-webkit-scrollbar {
+  //     display: none;
+}
+
+//     .slide {
+//       width: 100vw;
+//       height: 100vh;
+//     }
+//     .wrapper {
+//       display: flex;
+//       flex-direction: row;
+//       width: 400vw;
+//       transform: rotate(90deg) translateY(-100vh);
+//       transform-origin: top left;
+//     }
+//   }
+
+//   .horizontal-scroll-wrapper {
+//     position: absolute;
+//     display: block;
+//     top: 0;
+//     left: 0;
+//     width: 80px;
+//     max-height: 500px;
+//     margin: 0;
+//     background: #abc;
+//     overflow-y: auto;
+//     overflow-x: hidden;
+//     transform: rotate(-90deg) translateY(-80px);
+//     transform-origin: right top;
+//   }
+// }

@@ -1,0 +1,28 @@
+.navbar-container {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 1rem 2rem;
+  z-index: 100;
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    // position: fixed;
+    justify-content: space-evenly;
+    width: 50%;
+    li {
+      transition: 0.5s;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
