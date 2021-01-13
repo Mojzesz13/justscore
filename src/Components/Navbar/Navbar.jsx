@@ -1,24 +1,21 @@
 import React from 'react';
 import './Navbar.scss';
+import Hamburger from '../../common/hamburger';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+import { ReactComponent as Icon } from '../../assets/burger.svg';
 
-const Navbar = () => {
+const Navbar = ({ logoColor, titleColor }) => {
   return (
     <nav className='navbar-container'>
-      <div className='logo-container'>Logo</div>
-      <ul className='menu-items'>
-        <li>
-          <a href='#home'>Home</a>
-        </li>
-        <li>
-          <a href='#aboutUs'>O nas</a>
-        </li>
-        <li>
-          <a href='#projects'>Projects</a>
-        </li>
-        <li>
-          <a href='#contact'>Kontakt</a>
-        </li>
-      </ul>
+      <div className='navbar-container__logo'>
+        <Logo className='logo' />
+      </div>
+      <div className='navbar-container__title' style={{ color: titleColor }}>
+        Just Score
+      </div>
+      <div className='navbar-container__hamburger'>
+        <Icon className='icon' />
+      </div>
     </nav>
   );
 };

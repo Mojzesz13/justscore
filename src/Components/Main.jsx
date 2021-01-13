@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header/Header';
 import AboutUs from './AboutUs/AboutUs';
 import Projects from './Projects/Projects';
@@ -25,10 +25,12 @@ import Navbar from './Navbar/Navbar';
 // export default Main;
 
 function Main() {
+  const [logoColor, setLogoColor] = useState('brown');
+  const [titleColor, setTitleColor] = useState('brown');
   return (
     <section className='main-container'>
-      <Navbar />
-      <Header />
+      <Navbar logoColor={logoColor} titleColor={titleColor} />
+      <Header setLogoColor={setLogoColor} setTitleColor={setTitleColor} />
     </section>
   );
 }

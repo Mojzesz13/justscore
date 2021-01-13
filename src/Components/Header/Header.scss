@@ -1,4 +1,5 @@
 @import '../../scss/settings/fonts';
+@import '../../scss/settings/colors';
 .header-section {
   width: 100vw;
   height: 100vh;
@@ -11,11 +12,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-
+    // border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+    overflow: hidden;
     .header-section__sectioon-container__content {
-      background-color: brown;
+      background-color: $hover-background-color;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -26,7 +27,17 @@
         position: absolute;
         font-size: 1.5rem;
         top: 48%;
+        color: $base-font-color;
         font-family: $fontBase;
+        z-index: 2;
+      }
+      img {
+        width: auto;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        object-position: center;
       }
     }
     &:hover {
@@ -34,6 +45,12 @@
         animation: fillContainer 0.5s forwards;
         p {
           animation: textContainer 0.5s forwards;
+        }
+        img {
+          animation: imgContainer 5s forwards;
+          animation-delay: 1s;
+          transform: translateX(-20%);
+          transition: 15s;
         }
       }
     }
@@ -70,10 +87,30 @@
 
 @keyframes textContainer {
   0% {
-    color: black;
+    color: $base-font-color;
   }
 
   100% {
-    color: white;
+    color: $hover-font-color;
+  }
+}
+
+@keyframes imgContainer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes imgPosition {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
