@@ -12,21 +12,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // border-left: 0.5px solid black;
     border-right: 0.5px solid black;
     overflow: hidden;
     .header-section__sectioon-container__content {
       background-color: $hover-background-color;
-      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 50%;
       p {
         width: 20rem;
-        text-align: center;
         position: absolute;
-        font-size: 1.5rem;
         top: 48%;
+        text-align: center;
+        font-size: 1.5rem;
         color: $base-font-color;
         font-family: $fontBase;
         z-index: 2;
@@ -34,10 +33,9 @@
       img {
         width: auto;
         height: 100%;
-        opacity: 0;
         position: absolute;
+        opacity: 0;
         z-index: 1;
-        object-position: center;
       }
     }
     &:hover {
@@ -65,51 +63,27 @@
   50% {
     border-radius: 50%;
   }
-
-  80% {
-    border-radius: 50%;
-  }
-
-  80% {
-    border-radius: 35%;
-  }
-
   80% {
     border-radius: 15%;
   }
-
   100% {
     width: 100%;
     height: 100%;
     border-radius: 0;
   }
 }
-
 @keyframes textContainer {
   0% {
     color: $base-font-color;
   }
-
   100% {
     color: $hover-font-color;
   }
 }
-
 @keyframes imgContainer {
   0% {
     opacity: 0;
   }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes imgPosition {
-  0% {
-    opacity: 0;
-  }
-
   100% {
     opacity: 1;
   }
