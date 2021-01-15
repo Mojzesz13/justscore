@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 import sectionImg from '../../assets/4.jpg';
 
@@ -19,31 +20,31 @@ const Header = ({ setLogoColor, setTitleColor }) => {
   const itemList = [
     {
       name: 'strony www',
-      path: '',
+      path: '/website',
       img: sectionImg,
       onEnter: handleOnMouseEnterLogo,
       onLeave: handleOnMouseLeaveLogo,
     },
     {
       name: 'spacery wirtualne',
-      path: '',
+      path: '/virtualTour',
       img: sectionImg,
     },
     {
       name: 'logo i identyfikacja wizualna',
-      path: '',
+      path: '/virtualIdentification',
       img: sectionImg,
       onEnter: handleOnMouseEnterTitle,
       onLeave: handleOnMouseLeaveTitle,
     },
     {
       name: 'o nas',
-      path: '',
+      path: '/aboutUs',
       img: sectionImg,
     },
     {
       name: 'kontakt',
-      path: '',
+      path: '/contact',
       img: sectionImg,
     },
   ];
@@ -51,15 +52,16 @@ const Header = ({ setLogoColor, setTitleColor }) => {
   return (
     <section className='header-section'>
       {itemList.map((obj) => (
-        <div
+        <Link
+          to={obj.path}
           className='header-section__sectioon-container'
           onMouseEnter={obj.onEnter}
           onMouseLeave={obj.onLeave}
         >
           <div className='header-section__sectioon-container__content'>
-            <p>{obj.name}</p> <img src={obj.img} alt={'test'} />{' '}
+            <p>{obj.name}</p> <img src={obj.img} alt={'test'} />
           </div>
-        </div>
+        </Link>
       ))}
     </section>
   );

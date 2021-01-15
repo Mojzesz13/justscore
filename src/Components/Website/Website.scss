@@ -1,0 +1,78 @@
+@import '../../scss/settings/colors';
+
+.website-container {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  .website-container__title {
+    width: 100%;
+    height: 5rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    h2 {
+      padding-top: 1.5rem;
+    }
+  }
+  .website-container__content {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .test {
+      margin-bottom: 2rem;
+    }
+
+    .test {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .website-container__content__projects {
+        height: 22rem;
+        border: 0.5px solid black;
+        position: relative;
+        .logo {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+        .mpr {
+          max-width: 11.5rem;
+        }
+        .raiden {
+          max-width: 6.5rem;
+        }
+        .ola {
+          max-width: 16.5rem;
+        }
+        .wzzr {
+          max-width: 18.5rem;
+        }
+        &:hover {
+          background-color: $hover-background-color;
+
+          .logo {
+            fill: $hover-font-color;
+            g {
+              fill: $hover-font-color;
+              .st0 {
+                fill: $hover-font-color;
+              }
+            }
+          }
+        }
+      }
+
+      .versionA {
+        width: 57%;
+      }
+      .versionB {
+        width: 35%;
+      }
+    }
+  }
+}

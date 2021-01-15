@@ -2,7 +2,7 @@ import React from 'react';
 import './Contact.scss';
 
 const Contact = () => {
-  return <section id='contact' className='contact-container' />;
+  return <section className='contact-container'>contakt</section>;
 };
 
 export default Contact;

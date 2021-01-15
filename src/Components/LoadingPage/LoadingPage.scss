@@ -12,10 +12,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $hover-font-color;
     background-color: $hover-background-color;
-    p {
-      font-size: 5rem;
+    h1 {
+      font-size: 3rem;
+      color: $hover-font-color;
+      animation: titleAnimation 1.5s forwards;
+      animation-delay: 3.5s;
     }
   }
   .loadingPage-container__progress {
@@ -36,5 +38,15 @@
   100% {
     left: 100%;
     width: 0;
+    display: none;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    color: $hover-font-color;
+  }
+  100% {
+    color: $hover-background-color;
   }
 }
