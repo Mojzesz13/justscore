@@ -25,7 +25,7 @@ function Main() {
 
   return (
     <section className='main-container'>
-      {/* <LoadingPage /> */}
+      <LoadingPage />
       {/* <div
         className={
           redirect ? 'main-container__content show' : 'main-container__content '

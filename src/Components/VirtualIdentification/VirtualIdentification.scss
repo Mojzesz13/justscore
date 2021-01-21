@@ -1,0 +1,10 @@
+.virtual-identification-container {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  .virtual-identification-container__content {
+    height: 85%;
+    width: 100%;
+    background-color: blue;
+  }
+}

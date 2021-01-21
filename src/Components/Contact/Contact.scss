@@ -1,5 +1,32 @@
 .contact-container {
   width: 100vw;
   height: 100vh;
-  margin-top: 5rem;
+  overflow: hidden;
+  .contact-container__map {
+    width: 80%;
+    height: 50%;
+    margin: 2rem auto;
+    background-image: url('../../assets/map.jpg');
+    background-position: center;
+    background-color: yellowgreen;
+  }
+  .contact-container__text {
+    width: 60%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .contact-container__button {
+    width: 20rem;
+    height: 5rem;
+    background-color: brown;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+  }
 }
