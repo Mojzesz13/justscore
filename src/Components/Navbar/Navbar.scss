@@ -1,3 +1,6 @@
+@import 'src/scss/settings/mixins';
+@import 'src/scss/settings/colors';
+
 .navbar-container {
   height: 3rem;
   width: 100%;
@@ -6,8 +9,8 @@
   align-items: center;
   position: fixed;
   // padding: 1rem 2rem;
-  background-color: white;
-  padding-top: 1rem;
+  background-color: $base-background-color;
+  padding: 0.5rem 0;
   z-index: 100;
   overflow: hidden;
   // .menu-items {
@@ -57,5 +60,5 @@
 }
 
 .active-navbar {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $base-font-color;
 }

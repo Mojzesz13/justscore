@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.scss';
 import Hamburger from '../../common/hamburger';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as Icon } from '../../assets/burger.svg';
 
 const Navbar = ({ logoColor, titleColor }) => {
   const [showBorder, setShowBorder] = useState(false);
@@ -29,14 +29,14 @@ const Navbar = ({ logoColor, titleColor }) => {
         showBorder ? 'navbar-container ' : 'navbar-container active-navbar'
       }
     >
-      <div className='navbar-container__logo'>
+      <Link to='/' className='navbar-container__logo'>
         <Logo className='logo' />
-      </div>
+      </Link>
       <div className='navbar-container__title' style={{ color: titleColor }}>
         Just Score
       </div>
       <div className='navbar-container__hamburger'>
-        <Icon className='icon' />
+        <Hamburger className='icon' />
       </div>
     </nav>
   );

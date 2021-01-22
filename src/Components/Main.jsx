@@ -7,7 +7,7 @@ import Contact from './Contact/Contact';
 import './Main.scss';
 import Navbar from './Navbar/Navbar';
 import LoadingPage from './LoadingPage/LoadingPage';
-import VirtualTour from './VirtualTour/WirtualTour';
+import VirtualTour from './VirtualTour/VirtualTour';
 import VirtualIdentification from './VirtualIdentification/VirtualIdentification';
 import Website from './Website/Website';
 

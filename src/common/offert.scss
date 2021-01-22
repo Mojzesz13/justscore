@@ -1,3 +1,6 @@
+@import 'src/scss/settings/mixins';
+@import 'src/scss/settings/colors';
+
 .offert-title {
   font-size: 4rem;
   text-align: center;
@@ -17,7 +20,7 @@
   .offert-container__content {
     width: 20rem;
     height: 20rem;
-    border: 1px solid brown;
+    border: 1px solid $hover-background-color;
     margin: 1rem auto;
     display: flex;
     justify-content: center;
@@ -26,25 +29,24 @@
     .offert-container__title {
       font-size: 3rem;
       text-align: center;
-      color: brown;
+      color: $hover-background-color;
     }
     .offert-container__price {
       font-size: 3rem;
-      color: white;
+      color: $hover-font-color;
       z-index: 2;
       display: none;
     }
     .offert-container__text {
       font-size: 2rem;
       position: absolute;
-      color: seagreen;
       bottom: 0;
       display: none;
       opacity: 0;
     }
 
     &:hover {
-      background-color: brown;
+      background-color: $hover-background-color;
       .offert-container__title {
         display: none;
       }

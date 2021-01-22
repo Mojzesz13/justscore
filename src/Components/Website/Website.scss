@@ -1,4 +1,5 @@
 @import '../../scss/settings/colors';
+@import 'src/scss/settings/mixins';
 
 .website-container {
   width: 100vw;
@@ -13,7 +14,7 @@
     .website-container__project {
       height: 22rem;
       margin-top: 2rem;
-      border: 0.5px solid black;
+      border: 0.5px solid $base-font-color;
       position: relative;
       .logo {
         position: absolute;
@@ -37,9 +38,10 @@
       }
       &:hover {
         background-color: $hover-background-color;
-
-        .logo {
-          fill: $hover-font-color;
+        img {
+          .logo {
+            fill: white;
+          }
         }
       }
     }
