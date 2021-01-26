@@ -42,7 +42,7 @@ const VirtualTour = () => {
       <Title titleText='nasze realizacje' />
       <div className='virtualTour-container'>
         {walkList.map((obj) => (
-          <div className='virtualTour-container__content'>
+          <div key={obj.title} className='virtualTour-container__content'>
             <div className='imgWalk'></div>
             <div className='title'>Spacey {obj.title} </div>
             <div className='text'>{obj.text}</div>
@@ -65,8 +65,3 @@ const VirtualTour = () => {
 };
 
 export default VirtualTour;
-
-// <div className='aparat'>
-//   <div className='circle'></div>
-//   <div className='obiektyw' />
-// </div>;

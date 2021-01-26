@@ -38,10 +38,8 @@
       }
       &:hover {
         background-color: $hover-background-color;
-        img {
-          .logo {
-            fill: white;
-          }
+        .logo {
+          fill: white;
         }
       }
     }

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import sectionImg from '../../assets/4.jpg';
 
-const Header = ({ setLogoColor, setTitleColor }) => {
+const Header = ({ setLogoColor, setTitleColor, setBurgerColor }) => {
+ 
   const handleOnMouseEnterLogo = () => {
     setLogoColor('white');
   };
@@ -15,6 +16,13 @@ const Header = ({ setLogoColor, setTitleColor }) => {
   };
   const handleOnMouseLeaveTitle = () => {
     setTitleColor('brown');
+  };
+
+  const handleOnMouseEnterBurger = () => {
+    setBurgerColor('white');
+  };
+  const handleOnMouseLeaveBurger = () => {
+    setBurgerColor('brown');
   };
 
   const itemList = [
@@ -46,6 +54,8 @@ const Header = ({ setLogoColor, setTitleColor }) => {
       name: 'kontakt',
       path: '/contact',
       img: sectionImg,
+      onEnter: handleOnMouseEnterBurger,
+      onLeave: handleOnMouseLeaveBurger,
     },
   ];
 

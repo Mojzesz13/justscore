@@ -1,53 +1,47 @@
 import React from 'react';
 import './Website.scss';
-import Logo1 from '../../assets/mpr.svg';
-import Logo2 from '../../assets/raiden.svg';
-import Logo3 from '../../assets/ola.svg';
-import Logo4 from '../../assets/wzzr.svg';
+import { ReactComponent as Logo1 } from '../../assets/mpr.svg';
+import { ReactComponent as Logo2 } from '../../assets/raiden.svg';
+import { ReactComponent as Logo3 } from '../../assets/ola.svg';
+import { ReactComponent as Logo4 } from '../../assets/wzzr.svg';
 import Title from '../../common/title';
 import Offert from '../../common/offert';
 
 const siteList = [
   {
     name: 'mpr',
-    src: Logo1,
+    src: <Logo1 className='logo mpr' />,
     linkto: 'https://mojzesz13.github.io/Mpr/#/',
-    logoClassName: 'logo mpr',
     cName: 'website-container__project versionA',
   },
   {
     name: 'Raiden',
-    src: Logo2,
+    src: <Logo2 className='logo raiden' />,
     linkto: 'http://raiden.pl/#/',
-    logoClassName: 'logo raiden',
     cName: 'website-container__project versionB',
   },
   {
     name: 'ola',
-    src: Logo3,
+    src: <Logo3 className='logo ola' />,
     linkto: 'https://mojzesz13.github.io/Mpr/#/',
-    logoClassName: 'logo ola',
     cName: 'website-container__project versionB',
   },
   {
     name: 'wzzr',
-    src: Logo4,
+    src: <Logo4 className='logo wzzr' />,
     linkto: 'https://mojzesz13.github.io/Mpr/#/',
-    logoClassName: 'logo wzzr',
     cName: 'website-container__project versionA',
   },
   {
-    name: 'sunInstal',
-    src: Logo2,
+    name: 'sunInstall',
+    src: <Logo1 className='logo raiden' />,
     linkto: 'https://mojzesz13.github.io/Mpr/#/',
-    logoClassName: 'logo raiden',
     cName: 'website-container__project versionA',
   },
   {
     name: 'neuclen  ',
-    src: Logo1,
+    src: <Logo2 className='logo mpr' />,
     linkto: 'https://mojzesz13.github.io/Mpr/#/',
-    logoClassName: 'logo mpr',
     cName: 'website-container__project versionB',
   },
 ];
@@ -77,11 +71,7 @@ const Website = () => {
       <div className='website-container__main-content'>
         {siteList.map((obj) => (
           <a key={obj.name} href={obj.linkto} className={obj.cName}>
-            <img
-              src={obj.src}
-              className={obj.logoClassName}
-              alt={obj.logoClassName}
-            />
+            {obj.src}
           </a>
         ))}
       </div>

@@ -14,6 +14,7 @@ import Website from './Website/Website';
 function Main() {
   const [logoColor, setLogoColor] = useState('brown');
   const [titleColor, setTitleColor] = useState('brown');
+  const [burgerColor, setBurgerColor] = useState('brown');
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
@@ -33,12 +34,19 @@ function Main() {
       > */}
       <div className='main-container__content show'>
         <Router>
-          <Navbar logoColor={logoColor} titleColor={titleColor} />
+          <Navbar
+            logoColor={logoColor}
+            titleColor={titleColor}
+            burgerColor={burgerColor}
+            setLogoColor={setLogoColor}
+            setBurgerColor={setBurgerColor}
+          />
           <Switch>
             <Route exact path='/'>
               <Header
                 setLogoColor={setLogoColor}
                 setTitleColor={setTitleColor}
+                setBurgerColor={setBurgerColor}
               />
             </Route>
             <Route path='/projects' component={Projects} />

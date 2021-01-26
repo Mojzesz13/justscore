@@ -33,7 +33,14 @@ const VirtualIdentification = () => {
             <div className='img'>{obj.img}</div>
             <h1>{obj.title}</h1>
             <h2>{obj.headLine}</h2>
-            <p>{obj.offert}</p>
+            <ul>
+              <li>{obj.offert}</li>
+              <li>{obj.offert}</li>
+              <li>{obj.offert}</li> 
+              <li>{obj.offert}</li> 
+              <li>{obj.offert}</li>
+              <li>{obj.offert}</li>
+            </ul>
           </div>
         ))}
       </div>

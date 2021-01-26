@@ -1,0 +1,66 @@
+@import 'src/scss/settings/mixins';
+@import 'src/scss/settings/colors';
+
+.navList-Container {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+
+  .navList-Container__holder {
+    display: none;
+    .navList-Container__item {
+      text-decoration: none;
+      color: $hover-font-color;
+      color: black;
+      font-size: 1.5rem;
+    }
+  }
+
+  .navList-Container__decoration-bar {
+    background-color: $hover-background-color;
+    right: -100%;
+    transition: 1s;
+    animation: hideNavbar 1s forwards;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+.active {
+  .navList-Container__holder {
+    display: block;
+    z-index: 10;
+    .navList-Container__item {
+      text-decoration: none;
+      color: $hover-font-color;
+
+      font-size: 1.5rem;
+      z-index: 10;
+      margin-left: 5rem;
+    }
+  }
+  .navList-Container__decoration-bar {
+    animation: showNavbar 1s forwards;
+    z-index: 6;  }
+}
+
+@keyframes showNavbar {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes hideNavbar {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}

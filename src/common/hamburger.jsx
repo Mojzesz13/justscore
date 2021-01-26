@@ -1,10 +1,27 @@
 import React from 'react';
 import './hamburger.scss';
 
-const Hamburger = ({ click }) => {
+const Hamburger = ({
+  showNavbar,
+  setShowNavbar,
+  burgerColor,
+  setBurgerColor,
+}) => {
+  const handleOnClick = () => {
+    setShowNavbar(!showNavbar);
+    if (showNavbar) {
+      setBurgerColor('brown');
+    }
+    if (!showNavbar) {
+      setBurgerColor('white');
+    }
+  };
+
   return (
-    <div className={click ? 'hamburgerMenu open' : 'hamburgerMenu '}>
-      <div className="burgerBtn" />
+    <div className='hamburgerMenu ' onClick={handleOnClick}>
+      <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
+      <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
+      <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
     </div>
   );
 };
