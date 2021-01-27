@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import './offert.scss';
 
-export default function Offert({ title, price, description }) {
+export default function Offert({
+  title,
+  price,
+  cNameContent,
+  cNameDesctiption,
+  description,
+}) {
   const [activeClass, setActiveClass] = useState(false);
 
   const handleOnMouseEnter = () => {
@@ -14,16 +20,22 @@ export default function Offert({ title, price, description }) {
 
   return (
     <div
-      className={activeClass ? 'offert-container active' : 'offert-container '}
+      className={
+        activeClass ? 'offert-container active-offert' : 'offert-container '
+      }
     >
       <div
-        className='offert-container__content'
+        className={`offert-container__content ${cNameContent}`}
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
       >
         <h2 className='offert-container__title'>{title}</h2>
         <p className='offert-container__price'> {price}</p>
-        <p className='offert-container__text'>{description}</p>
+      </div>
+      <div
+        className={`offert-container__description-holder ${cNameDesctiption}`}
+      >
+        {description}
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ function NavList({ showNavbar }) {
     <>
       <div
         className={
-          showNavbar ? 'navList-Container active' : 'navList-Container'
+          showNavbar ? 'navList-Container active-navbar' : 'navList-Container'
         }
       >
         <div className='navList-Container__holder'>

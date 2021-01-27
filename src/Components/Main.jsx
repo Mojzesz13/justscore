@@ -16,7 +16,7 @@ function Main() {
   const [titleColor, setTitleColor] = useState('brown');
   const [burgerColor, setBurgerColor] = useState('brown');
   const [redirect, setRedirect] = useState(false);
-
+  const [showNavbar, setShowNavbar] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
       setRedirect(true);
@@ -40,6 +40,8 @@ function Main() {
             burgerColor={burgerColor}
             setLogoColor={setLogoColor}
             setBurgerColor={setBurgerColor}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
           />
           <Switch>
             <Route exact path='/'>
@@ -47,6 +49,7 @@ function Main() {
                 setLogoColor={setLogoColor}
                 setTitleColor={setTitleColor}
                 setBurgerColor={setBurgerColor}
+                setShowNavbar={setShowNavbar}
               />
             </Route>
             <Route path='/projects' component={Projects} />

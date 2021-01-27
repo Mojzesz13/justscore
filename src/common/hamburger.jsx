@@ -7,6 +7,7 @@ const Hamburger = ({
   burgerColor,
   setBurgerColor,
 }) => {
+
   const handleOnClick = () => {
     setShowNavbar(!showNavbar);
     if (showNavbar) {
@@ -22,6 +23,7 @@ const Hamburger = ({
       <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
       <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
       <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
+
     </div>
   );
 };

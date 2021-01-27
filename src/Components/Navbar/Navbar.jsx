@@ -13,8 +13,9 @@ const Navbar = ({
   burgerColor,
   setLogoColor,
   setBurgerColor,
+  showNavbar,
+  setShowNavbar,
 }) => {
-  const [showNavbar, setShowNavbar] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -28,6 +29,10 @@ const Navbar = ({
     );
 
     setPrevScrollPos(currentScrollPos);
+
+    {
+      visible ? setBurgerColor('brown') : setBurgerColor('white');
+    }
   };
 
   useEffect(() => {
@@ -43,7 +48,7 @@ const Navbar = ({
       }
     >
       <Link to='/' className='navbar-container__logo'>
-        <Logo className='logo' />
+        <Logo className='logo' style={{ color: logoColor }} />
       </Link>
       <div className='navbar-container__title' style={{ color: titleColor }}>
         Just Score

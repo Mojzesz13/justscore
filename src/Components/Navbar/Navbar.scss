@@ -3,39 +3,47 @@
 
 .navbar-container {
   height: 3rem;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  // background-color: white;
   padding: 0.5rem 0;
   z-index: 10;
   overflow: hidden;
   .navbar-container__logo {
     font-size: 3rem;
     transition: 1s;
+    z-index: 100;
     .logo {
       width: 2.5rem;
       padding-left: 1rem;
+      z-index: 100;
+      // .st0 {
+      //   fill: yellow;
+      // }
+      // .st1 {
+      //   fill: red;
+      // }
+      // .st2 {
+      //   fill: blue;
+      // }
     }
   }
   .navbar-container__title {
     font-size: 2rem;
     transition: 1s;
     text-transform: uppercase;
-    z-index: 15;
   }
   .navbar-container__hamburger {
     transition: 1s;
     .icon {
       width: 2.5rem;
       padding-right: 1rem;
+      transition: 1s;
     }
   }
 }
-
 .active-navbar {
-  border-bottom: 1px solid $base-font-color;
-  background-color: white;
+  background-color: white !important;
 }

@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import sectionImg from '../../assets/4.jpg';
 
-const Header = ({ setLogoColor, setTitleColor, setBurgerColor }) => {
- 
+const Header = ({
+  setLogoColor,
+  setTitleColor,
+  setBurgerColor,
+  showNavbar,
+}) => {
   const handleOnMouseEnterLogo = () => {
     setLogoColor('white');
   };
@@ -19,9 +23,15 @@ const Header = ({ setLogoColor, setTitleColor, setBurgerColor }) => {
   };
 
   const handleOnMouseEnterBurger = () => {
+    if (showNavbar) {
+      return null;
+    }
     setBurgerColor('white');
   };
   const handleOnMouseLeaveBurger = () => {
+    if (showNavbar) {
+      return null;
+    }
     setBurgerColor('brown');
   };
 
@@ -63,6 +73,7 @@ const Header = ({ setLogoColor, setTitleColor, setBurgerColor }) => {
     <section className='header-section'>
       {itemList.map((obj) => (
         <Link
+          key={obj.name}
           to={obj.path}
           className='header-section__sectioon-container'
           onMouseEnter={obj.onEnter}

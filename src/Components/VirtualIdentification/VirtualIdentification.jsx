@@ -29,15 +29,18 @@ const VirtualIdentification = () => {
       <Title titleText='Logotyy' />
       <div className='virtual-identification-container'>
         {logoTypes.map((obj) => (
-          <div className='virtual-identification-container__content'>
+          <div
+            key={obj.title}
+            className='virtual-identification-container__content'
+          >
             <div className='img'>{obj.img}</div>
             <h1>{obj.title}</h1>
             <h2>{obj.headLine}</h2>
             <ul>
               <li>{obj.offert}</li>
               <li>{obj.offert}</li>
-              <li>{obj.offert}</li> 
-              <li>{obj.offert}</li> 
+              <li>{obj.offert}</li>
+              <li>{obj.offert}</li>
               <li>{obj.offert}</li>
               <li>{obj.offert}</li>
             </ul>
