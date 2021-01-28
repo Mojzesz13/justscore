@@ -2,7 +2,7 @@ import React from 'react';
 
 function Title({ titleText }) {
   const containerStyle = {
-    width: '100vw',
+    width: '100%',
     height: '5rem',
     marginTop: '4rem',
     fontSize: '1.5rem',

@@ -4,8 +4,6 @@ import './Navbar.scss';
 import Hamburger from '../../common/hamburger';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import NavList from './NavList';
-import useScrollPosition from '@react-hook/window-scroll';
-import userEvent from '@testing-library/user-event';
 
 const Navbar = ({
   logoColor,
@@ -19,7 +17,8 @@ const Navbar = ({
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  const handleScroll = () => {
+  const handleScroll = (e) => {
+    e.preventDefault();
     const currentScrollPos = window.pageYOffset;
 
     setVisible(
@@ -48,7 +47,7 @@ const Navbar = ({
       }
     >
       <Link to='/' className='navbar-container__logo'>
-        <Logo className='logo' style={{ color: logoColor }} />
+        <Logo className='logo' style={{ fill: logoColor }} />
       </Link>
       <div className='navbar-container__title' style={{ color: titleColor }}>
         Just Score
@@ -63,6 +62,7 @@ const Navbar = ({
           setShowNavbar={setShowNavbar}
           burgerColor={burgerColor}
           setBurgerColor={setBurgerColor}
+          setLogoColor={setLogoColor}
         />
       </div>
       <NavList showNavbar={showNavbar} />

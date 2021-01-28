@@ -3,7 +3,7 @@
 
 .hamburgerMenu {
   width: 4rem;
-  height: 4rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,8 +17,8 @@
   justify-content: space-evenly;
 
   .burgerBtn {
-    width: 2.5rem;
-    height: 0.1rem;
+    width: 2rem;
+    height: 0.05rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
     // transition: all 0.5s ease-in-out;

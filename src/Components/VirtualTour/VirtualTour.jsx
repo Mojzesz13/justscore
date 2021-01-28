@@ -17,6 +17,18 @@ const VirtualTour = () => {
         ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum aspernatur fugit, ea odit qui accusantium ullam repudiandae',
       img: '',
     },
+    {
+      title: 'w pomieszczeniu',
+      text:
+        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum aspernatur fugit, ea odit qui accusantium ullam repudiandae',
+      img: '',
+    },
+    {
+      title: 'na zewnątrz',
+      text:
+        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum aspernatur fugit, ea odit qui accusantium ullam repudiandae',
+      img: '',
+    },
   ];
 
   const offertList = [
@@ -24,16 +36,22 @@ const VirtualTour = () => {
       title: 'Podstawowy',
       price: '200zł',
       text: 'Oferujemy Ci 1',
+      cNameContent: 'left',
+      cNameDesctiption: 'rightD',
     },
     {
       title: 'Profesjonalny',
       price: '400zł',
       text: 'Oferujemy Ci 2',
+      cNameContent: 'left',
+      cNameDesctiption: 'rightD',
     },
     {
       title: 'Premium',
       price: '600zł',
       text: 'Oferujemy Ci 3',
+      cNameContent: 'left',
+      cNameDesctiption: 'rightD',
     },
   ];
 
@@ -58,6 +76,8 @@ const VirtualTour = () => {
           title={obj.title}
           price={obj.price}
           description={obj.text}
+          cNameContent={obj.cNameContent}
+          cNameDesctiption={obj.cNameDesctiption}
         />
       ))}
     </>

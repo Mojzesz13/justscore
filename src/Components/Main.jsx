@@ -17,6 +17,7 @@ function Main() {
   const [burgerColor, setBurgerColor] = useState('brown');
   const [redirect, setRedirect] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setRedirect(true);
@@ -26,7 +27,7 @@ function Main() {
 
   return (
     <section className='main-container'>
-      <LoadingPage />
+      {/* <LoadingPage />*/}
       {/* <div
         className={
           redirect ? 'main-container__content show' : 'main-container__content '
@@ -34,6 +35,7 @@ function Main() {
       > */}
       <div className='main-container__content show'>
         <Router>
+          {/*
           <Navbar
             logoColor={logoColor}
             titleColor={titleColor}
@@ -42,7 +44,7 @@ function Main() {
             setBurgerColor={setBurgerColor}
             showNavbar={showNavbar}
             setShowNavbar={setShowNavbar}
-          />
+          />*/}
           <Switch>
             <Route exact path='/'>
               <Header

@@ -27,12 +27,14 @@ const Header = ({
       return null;
     }
     setBurgerColor('white');
+    setLogoColor('white');
   };
   const handleOnMouseLeaveBurger = () => {
     if (showNavbar) {
       return null;
     }
     setBurgerColor('brown');
+    setLogoColor('brown');
   };
 
   const itemList = [

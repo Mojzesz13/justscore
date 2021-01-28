@@ -6,15 +6,17 @@ const Hamburger = ({
   setShowNavbar,
   burgerColor,
   setBurgerColor,
+  setLogoColor,
 }) => {
-
   const handleOnClick = () => {
     setShowNavbar(!showNavbar);
     if (showNavbar) {
       setBurgerColor('brown');
+      setLogoColor('brown');
     }
     if (!showNavbar) {
       setBurgerColor('white');
+      setLogoColor('white');
     }
   };
 
@@ -23,7 +25,6 @@ const Hamburger = ({
       <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
       <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
       <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
-
     </div>
   );
 };
