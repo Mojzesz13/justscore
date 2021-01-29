@@ -1,13 +1,6 @@
 @import 'src/scss/settings/mixins';
 @import 'src/scss/settings/colors';
 
-.offert-title {
-  width: 100%;
-  font-size: 4rem;
-  text-align: center;
-  margin: 3rem 0 2rem 0;
-  overflow: hidden;
-}
 .offert-container {
   overflow: hidden;
   width: 100%;
@@ -23,81 +16,50 @@
     width: 20rem;
     height: 20rem;
     border: 1px solid $hover-background-color;
-    // margin: 1rem auto;
     display: flex;
     justify-content: center;
     position: absolute;
     align-items: center;
     transition: 1s;
+    overflow: hidden;
+    right: 2.5rem;
     .offert-container__title {
       font-size: 3rem;
       text-align: center;
       color: $hover-background-color;
     }
-    .offert-container__price {
-      font-size: 3rem;
-      color: $hover-font-color;
-      z-index: 2;
-      display: none;
-    }
-    .offert-container__text {
-      font-size: 2rem;
-      position: absolute;
-      bottom: -100rem;
-      display: none;
-      opacity: 0;
-    }
-
     &:hover {
       background-color: $hover-background-color;
       .offert-container__title {
-        display: none;
-      }
-      .offert-container__price {
-        font-size: 3rem;
-        display: block;
-      }
-      .offert-container__text {
-        display: block;
-        bottom: 30%;
-        animation: textAnimation 1s forwards;
+        color: white;
       }
     }
-  }
-  .left {
-    left: 2.5rem;
-  }
-  .right {
-    right: 10%;
   }
 
   .offert-container__description-holder {
     position: absolute;
-    width: 74%;
+    left: 0;
+    width: 0;
     height: 20rem;
-    font-size: 6rem;
+    font-size: 5rem;
     transition: 1s;
     background-color: $hover-background-color;
-  }
-
-  .rightD {
-    color: salmon;
-    right: -100%;
-  }
-  .leftD {
-    color: seagreen;
-    left: -100%;
+    p {
+      display: none;
+      animation: textAnimation .5s forwards;
+    }
+    
   }
 }
 
 .active-offert {
-  .leftD {
-    color: orangered;
-    left: 10%;
-  }
-  .rightD {
-    color: salmon;
-    right: 2.5rem;
+  .offert-container__description-holder {
+    left: 2.5rem;
+    width: 74%;
+    transition: 1s;
+    p {
+     display: inline;
+    }
   }
 }
 

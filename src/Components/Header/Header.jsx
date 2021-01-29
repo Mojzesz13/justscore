@@ -4,17 +4,18 @@ import './Header.scss';
 import sectionImg from '../../assets/4.jpg';
 
 const Header = ({
-  setLogoColor,
   setTitleColor,
-  setBurgerColor,
   showNavbar,
+  setLogoIsHovered,
+  setBurgerIsHovered,
 }) => {
   const handleOnMouseEnterLogo = () => {
-    setLogoColor('white');
+    setLogoIsHovered(true);
   };
   const handleOnMouseLeaveLogo = () => {
-    setLogoColor('brown');
+    setLogoIsHovered(false);
   };
+
   const handleOnMouseEnterTitle = () => {
     setTitleColor('white');
   };
@@ -26,15 +27,15 @@ const Header = ({
     if (showNavbar) {
       return null;
     }
-    setBurgerColor('white');
-    setLogoColor('white');
+    setLogoIsHovered(true);
+    setBurgerIsHovered(true);
   };
   const handleOnMouseLeaveBurger = () => {
     if (showNavbar) {
       return null;
     }
-    setBurgerColor('brown');
-    setLogoColor('brown');
+    setLogoIsHovered(true);
+    setBurgerIsHovered(false);
   };
 
   const itemList = [
@@ -80,6 +81,7 @@ const Header = ({
           className='header-section__sectioon-container'
           onMouseEnter={obj.onEnter}
           onMouseLeave={obj.onLeave}
+          onClick={obj.onLeave}
         >
           <div className='header-section__sectioon-container__content'>
             <p>{obj.name}</p> <img src={obj.img} alt={'test'} />

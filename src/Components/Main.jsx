@@ -12,11 +12,12 @@ import VirtualIdentification from './VirtualIdentification/VirtualIdentification
 import Website from './Website/Website';
 
 function Main() {
-  const [logoColor, setLogoColor] = useState('brown');
+ 
   const [titleColor, setTitleColor] = useState('brown');
-  const [burgerColor, setBurgerColor] = useState('brown');
   const [redirect, setRedirect] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [logoIsHovered, setLogoIsHovered] = useState(false)
+  const [burgerIsHovered, setBurgerIsHovered] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,31 +28,31 @@ function Main() {
 
   return (
     <section className='main-container'>
-      {/* <LoadingPage />*/}
-      {/* <div
+      {/* <LoadingPage />
+       <div
         className={
           redirect ? 'main-container__content show' : 'main-container__content '
         }
-      > */}
+      > 
+      */}
       <div className='main-container__content show'>
         <Router>
-          {/*
           <Navbar
-            logoColor={logoColor}
             titleColor={titleColor}
-            burgerColor={burgerColor}
-            setLogoColor={setLogoColor}
-            setBurgerColor={setBurgerColor}
             showNavbar={showNavbar}
             setShowNavbar={setShowNavbar}
-          />*/}
+            logoIsHovered={logoIsHovered}
+            setLogoIsHovered={setLogoIsHovered}
+            burgerIsHovered={burgerIsHovered}
+            setBurgerIsHovered={setBurgerIsHovered}
+          />
           <Switch>
             <Route exact path='/'>
               <Header
-                setLogoColor={setLogoColor}
                 setTitleColor={setTitleColor}
-                setBurgerColor={setBurgerColor}
                 setShowNavbar={setShowNavbar}
+                setLogoIsHovered={setLogoIsHovered}
+                setBurgerIsHovered={setBurgerIsHovered}
               />
             </Route>
             <Route path='/projects' component={Projects} />

@@ -2,22 +2,19 @@
 @import 'src/scss/settings/mixins';
 
 .website-container {
-  width: 100vw;
-  height: 200rem;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   .website-container__main-content {
-    height: 85%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-     overflow-x: hidden;
     .website-container__project {
       height: 22rem;
       margin-top: 2rem;
       border: 0.5px solid $base-font-color;
       position: relative;
-       overflow-x: hidden;
       .logo {
         position: absolute;
         top: 0;

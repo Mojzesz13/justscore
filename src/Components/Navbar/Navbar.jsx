@@ -6,13 +6,13 @@ import { ReactComponent as Logo } from '../../assets/logo.svg';
 import NavList from './NavList';
 
 const Navbar = ({
-  logoColor,
   titleColor,
-  burgerColor,
-  setLogoColor,
-  setBurgerColor,
   showNavbar,
   setShowNavbar,
+  logoIsHovered,
+  setLogoIsHovered,
+  burgerIsHovered,
+  setBurgerIsHovered,
 }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -30,7 +30,10 @@ const Navbar = ({
     setPrevScrollPos(currentScrollPos);
 
     {
-      visible ? setBurgerColor('brown') : setBurgerColor('white');
+      visible ? setLogoIsHovered(false) : setLogoIsHovered(true);
+    }
+    {
+      visible ? setBurgerIsHovered(false) : setBurgerIsHovered(true);
     }
   };
 
@@ -47,22 +50,22 @@ const Navbar = ({
       }
     >
       <Link to='/' className='navbar-container__logo'>
-        <Logo className='logo' style={{ fill: logoColor }} />
+        <Logo className={logoIsHovered ? 'logo active-logo' : 'logo'} />
       </Link>
       <div className='navbar-container__title' style={{ color: titleColor }}>
         Just Score
       </div>
       <div
         className='navbar-container__hamburger'
-        style={{ color: titleColor, zIndex: '5 ' }}
+        style={{  zIndex: '5 ' }}
       >
         <Hamburger
           className='icon'
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
-          burgerColor={burgerColor}
-          setBurgerColor={setBurgerColor}
-          setLogoColor={setLogoColor}
+          setLogoIsHovered={setLogoIsHovered}
+          burgerIsHovered={burgerIsHovered}
+          setBurgerIsHovered={setBurgerIsHovered}
         />
       </div>
       <NavList showNavbar={showNavbar} />

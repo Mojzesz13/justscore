@@ -51,29 +51,21 @@ const offertList = [
     title: 'Podstawowy',
     price: '200zł',
     text: 'Oferujemy Ci 1',
-    cNameContent: 'left',
-    cNameDesctiption: 'rightD',
   },
   {
     title: 'Profesjonalny',
     price: '400zł',
     text: 'Oferujemy Ci 2',
-    cNameContent: 'left',
-    cNameDesctiption: 'rightD',
   },
   {
     title: 'Premium',
     price: '600zł',
     text: 'Oferujemy Ci 3',
-    cNameContent: 'left',
-    cNameDesctiption: 'rightD',
   },
   {
     title: 'Ultra Mega Wypasiony',
     price: '800zł',
     text: 'Oferujemy Ci 4',
-    cNameContent: 'left',
-    cNameDesctiption: 'rightD',
   },
 ];
 
@@ -88,20 +80,10 @@ const Website = () => {
           </a>
         ))}
       </div>
-      
       <Title titleText='oferta naszych pakietów' />
-      {offertList.map(
-        ({ title, price, text, cNameContent, cNameDesctiption }) => (
-          <Offert
-            key={title}
-            title={title}
-            price={price}
-            description={text}
-            cNameContent={cNameContent}
-            cNameDesctiption={cNameDesctiption}
-          />
-        )
-      )}
+      {offertList.map(({ title, price, text }) => (
+        <Offert key={title} title={title} price={price} description={text} />
+      ))}
     </div>
   );
 };

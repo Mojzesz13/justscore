@@ -25,17 +25,16 @@ export default function Offert({
       }
     >
       <div
-        className={`offert-container__content ${cNameContent}`}
+        className='offert-container__content '
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
       >
-        <h2 className='offert-container__title'>{title}</h2>
-        <p className='offert-container__price'> {price}</p>
+        <h2 className='offert-container__title'>
+          {activeClass ? price : title}
+        </h2>
       </div>
-      <div
-        className={`offert-container__description-holder ${cNameDesctiption}`}
-      >
-        {description}
+      <div className='offert-container__description-holder'>
+        <p>{description}</p>
       </div>
     </div>
   );

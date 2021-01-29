@@ -4,27 +4,34 @@ import './hamburger.scss';
 const Hamburger = ({
   showNavbar,
   setShowNavbar,
-  burgerColor,
-  setBurgerColor,
-  setLogoColor,
+  setLogoIsHovered,
+  burgerIsHovered,
+  setBurgerIsHovered,
 }) => {
   const handleOnClick = () => {
     setShowNavbar(!showNavbar);
     if (showNavbar) {
-      setBurgerColor('brown');
-      setLogoColor('brown');
+      setLogoIsHovered(false);
+      setBurgerIsHovered(false);
     }
     if (!showNavbar) {
-      setBurgerColor('white');
-      setLogoColor('white');
+      setLogoIsHovered(true);
+      setBurgerIsHovered(true);
     }
   };
 
   return (
-    <div className='hamburgerMenu ' onClick={handleOnClick}>
-      <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
-      <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
-      <div className='burgerBtn' style={{ backgroundColor: burgerColor }} />
+    <div
+      className={
+        burgerIsHovered
+          ? 'hamburger-menu active-burger'
+          : 'hamburger-menu desactive-burger '
+      }
+      onClick={handleOnClick}
+    >
+      <div className='burger-btn' />
+      <div className='burger-btn' />
+      <div className='burger-btn' />
     </div>
   );
 };

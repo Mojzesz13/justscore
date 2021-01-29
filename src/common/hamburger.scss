@@ -1,7 +1,7 @@
 @import 'src/scss/settings/mixins';
 @import 'src/scss/settings/colors';
 
-.hamburgerMenu {
+.hamburger-menu {
   width: 4rem;
   height: 3rem;
   display: flex;
@@ -16,11 +16,12 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  .burgerBtn {
+  .burger-btn {
     width: 2rem;
     height: 0.05rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  
     // transition: all 0.5s ease-in-out;
 
     // &::before,
@@ -45,6 +46,21 @@
     }
   }
 }
+
+.active-burger {
+  .burger-btn {
+    background-color: white !important;
+  }
+}
+
+.desactive-burger {
+  .burger-btn {
+    animation: burger-animation 1.5s forwards;
+  }
+}
+
+
+  
 // .open {
 //   .burgerBtn {
 //     transform: translateX(-50px);
@@ -58,3 +74,11 @@
 //     }
 //   }
 // }
+@keyframes burger-animation {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: brown;
+  }
+}
