@@ -12,11 +12,10 @@ import VirtualIdentification from './VirtualIdentification/VirtualIdentification
 import Website from './Website/Website';
 
 function Main() {
- 
-  const [titleColor, setTitleColor] = useState('brown');
   const [redirect, setRedirect] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [logoIsHovered, setLogoIsHovered] = useState(false)
+  const [logoIsHovered, setLogoIsHovered] = useState('logo');
+  const [titleIsHovered, setTitleIsHovered] = useState(false);
   const [burgerIsHovered, setBurgerIsHovered] = useState(false);
 
   useEffect(() => {
@@ -38,20 +37,22 @@ function Main() {
       <div className='main-container__content show'>
         <Router>
           <Navbar
-            titleColor={titleColor}
             showNavbar={showNavbar}
             setShowNavbar={setShowNavbar}
             logoIsHovered={logoIsHovered}
             setLogoIsHovered={setLogoIsHovered}
+            titleIsHovered={titleIsHovered}
             burgerIsHovered={burgerIsHovered}
             setBurgerIsHovered={setBurgerIsHovered}
           />
           <Switch>
             <Route exact path='/'>
               <Header
-                setTitleColor={setTitleColor}
                 setShowNavbar={setShowNavbar}
+                logoIsHovered={logoIsHovered}
                 setLogoIsHovered={setLogoIsHovered}
+                setTitleIsHovered={setTitleIsHovered}
+                burgerIsHovered={burgerIsHovered}
                 setBurgerIsHovered={setBurgerIsHovered}
               />
             </Route>

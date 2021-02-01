@@ -1,0 +1,31 @@
+@import '../scss/settings/colors';
+@import '../scss/settings/mixins';
+
+.navbar-container__logo {
+  font-size: 3rem;
+  transition: 1s;
+  z-index: 100;
+  .logo {
+    width: 2.5rem;
+    max-height: 3rem;
+    padding-left: 1rem;
+    fill: $hover-background-color;
+  }
+  .active-logo-header {
+    animation: logo-animation 0.5s forwards;
+    animation-delay: 0.3s;
+  }
+
+  .active-logo-navbar {
+    animation: logo-animation 0.5s forwards;
+    animation-delay: 0.7s;
+  }
+}
+@keyframes logo-animation {
+  0% {
+    fill: $hover-background-color;
+  }
+  100% {
+    fill: $hover-font-color;
+  }
+}

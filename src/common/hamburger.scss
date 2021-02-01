@@ -15,13 +15,13 @@
   z-index: 100;
   flex-direction: column;
   justify-content: space-evenly;
-
   .burger-btn {
     width: 2rem;
     height: 0.05rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  
+    background-color: $hover-background-color;
+
     // transition: all 0.5s ease-in-out;
 
     // &::before,
@@ -47,20 +47,25 @@
   }
 }
 
-.active-burger {
+.active-burger-navbar {
   .burger-btn {
-    background-color: white !important;
+    background-color: $hover-font-color;
   }
 }
 
-.desactive-burger {
+.desactive-burger-navbar {
   .burger-btn {
     animation: burger-animation 1.5s forwards;
   }
 }
 
+.active-burger-header {
+  .burger-btn {
+    animation: burger-header-animation 0.5s forwards;
+    animation-delay: 0.3s;
+  }
+}
 
-  
 // .open {
 //   .burgerBtn {
 //     transform: translateX(-50px);
@@ -76,9 +81,18 @@
 // }
 @keyframes burger-animation {
   0% {
-    background-color: white;
+    background-color: $hover-font-color;
   }
   100% {
-    background-color: brown;
+    background-color: $hover-background-color;
+  }
+}
+
+@keyframes burger-header-animation {
+  0% {
+    background-color: $hover-background-color;
+  }
+  100% {
+    background-color: $hover-font-color;
   }
 }

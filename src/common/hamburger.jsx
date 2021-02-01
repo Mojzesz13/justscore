@@ -11,22 +11,25 @@ const Hamburger = ({
   const handleOnClick = () => {
     setShowNavbar(!showNavbar);
     if (showNavbar) {
-      setLogoIsHovered(false);
-      setBurgerIsHovered(false);
+      setLogoIsHovered(0);
+      setBurgerIsHovered(2);
     }
     if (!showNavbar) {
-      setLogoIsHovered(true);
-      setBurgerIsHovered(true);
+      setLogoIsHovered(2);
+      setBurgerIsHovered(1);
     }
   };
 
+  const burgerCondition = burgerIsHovered;
+
   return (
     <div
-      className={
-        burgerIsHovered
-          ? 'hamburger-menu active-burger'
-          : 'hamburger-menu desactive-burger '
-      }
+      className={`hamburger-menu
+                 ${burgerCondition === 1 ? 'active-burger-navbar 1' : ''}
+                 ${burgerCondition === 2 ? 'desactive-burger-navbar ' : ''}
+                 ${burgerCondition === 3 ? 'active-burger-header' : ''}
+                 ${burgerCondition === 4 ? 'desactive-burger-click' : ''}
+        `}
       onClick={handleOnClick}
     >
       <div className='burger-btn' />

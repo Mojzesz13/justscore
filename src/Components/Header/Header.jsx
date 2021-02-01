@@ -1,41 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
+import { v4 as uuidv4 } from 'uuid';
 import sectionImg from '../../assets/4.jpg';
 
 const Header = ({
-  setTitleColor,
   showNavbar,
+  logoIsHovered,
   setLogoIsHovered,
+  setTitleIsHovered,
+  burgerIsHovered,
   setBurgerIsHovered,
 }) => {
   const handleOnMouseEnterLogo = () => {
-    setLogoIsHovered(true);
+    if (logoIsHovered !== 2) setLogoIsHovered(1);
   };
   const handleOnMouseLeaveLogo = () => {
-    setLogoIsHovered(false);
+    if (logoIsHovered !== 2) setLogoIsHovered(0);
   };
 
   const handleOnMouseEnterTitle = () => {
-    setTitleColor('white');
+    setTitleIsHovered(true);
   };
   const handleOnMouseLeaveTitle = () => {
-    setTitleColor('brown');
+    setTitleIsHovered(false);
   };
 
   const handleOnMouseEnterBurger = () => {
+    console.log(burgerIsHovered);
     if (showNavbar) {
       return null;
     }
-    setLogoIsHovered(true);
-    setBurgerIsHovered(true);
+    if (burgerIsHovered !== 1) setBurgerIsHovered(3);
+    console.log(burgerIsHovered);
   };
   const handleOnMouseLeaveBurger = () => {
     if (showNavbar) {
       return null;
     }
-    setLogoIsHovered(true);
-    setBurgerIsHovered(false);
+    if (burgerIsHovered !== 1) setBurgerIsHovered(4);
   };
 
   const itemList = [
@@ -74,17 +77,17 @@ const Header = ({
 
   return (
     <section className='header-section'>
-      {itemList.map((obj) => (
+      {itemList.map(({ name, path, img, onEnter, onLeave }) => (
         <Link
-          key={obj.name}
-          to={obj.path}
-          className='header-section__sectioon-container'
-          onMouseEnter={obj.onEnter}
-          onMouseLeave={obj.onLeave}
-          onClick={obj.onLeave}
+          key={uuidv4()}
+          to={path}
+          className='header-section__section-container'
+          onMouseEnter={onEnter}
+          onMouseLeave={onLeave}
+          onClick={onLeave}
         >
-          <div className='header-section__sectioon-container__content'>
-            <p>{obj.name}</p> <img src={obj.img} alt={'test'} />
+          <div className='header-section__section-container__content'>
+            <p>{name}</p> <img src={img} alt={name} />
           </div>
         </Link>
       ))}

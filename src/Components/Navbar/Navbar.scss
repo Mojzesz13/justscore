@@ -2,62 +2,49 @@
 @import 'src/scss/settings/colors';
 
 .navbar-container {
-  height: 3rem;
   width: 100%;
+  height: 3rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
   position: fixed;
-  padding: 0.5rem 0;
   z-index: 10;
-  .navbar-container__logo {
-    font-size: 3rem;
-    transition: 1s;
-    z-index: 100;
-    .logo {
-      width: 2.5rem;
-      padding-left: 1rem;
-      z-index: 100;
-      fill: brown;
-    }
-    .active-logo {
-      animation: logo-animation 2s forwards;
-    }
-  }
   .navbar-container__title {
     font-size: 2rem;
-    transition: 1s;
     text-transform: uppercase;
+    color: $hover-background-color;
+  }
+  .active-title {
+    animation: title-animation 0.5s forwards;
+    animation-delay: 0.3s;
   }
   .navbar-container__hamburger {
-    transition: 1s;
     .icon {
       width: 2.5rem;
       padding-right: 1rem;
-      transition: 1s;
     }
   }
 }
 .active-navbar {
-  animation: navbar-animation .5s forwards;
+  animation: navbar-animation 0.5s forwards;
 }
 
-@keyframes navbar-animation{
-  0%{
+@keyframes navbar-animation {
+  0% {
     background-color: transparent;
   }
-  100%{
-     background-color: white;
+  100% {
+    background-color: $hover-font-color;
   }
 }
 
-@keyframes logo-animation {
+@keyframes title-animation {
   0% {
-    fill: brown;
+    color: $hover-background-color;
   }
-
   100% {
-    fill: white;
+    color: $hover-font-color;
   }
 }

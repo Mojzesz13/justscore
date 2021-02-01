@@ -2,6 +2,7 @@ import React from 'react';
 import Offert from '../../common/offert';
 import Title from '../../common/title';
 import './VirtualTour.scss';
+import { v4 as uuidv4 } from 'uuid';
 
 const VirtualTour = () => {
   let walkList = [
@@ -60,7 +61,7 @@ const VirtualTour = () => {
       <Title titleText='nasze realizacje' />
       <div className='virtualTour-container'>
         {walkList.map((obj) => (
-          <div key={obj.title} className='virtualTour-container__content'>
+          <div key={uuidv4()} className='virtualTour-container__content'>
             <div className='imgWalk'></div>
             <div className='title'>Spacey {obj.title} </div>
             <div className='text'>{obj.text}</div>

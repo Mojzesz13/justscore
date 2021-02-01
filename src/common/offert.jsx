@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import './offert.scss';
 
-export default function Offert({
-  title,
-  price,
-  cNameContent,
-  cNameDesctiption,
-  description,
-}) {
+export default function Offert({ title, price, description }) {
   const [activeClass, setActiveClass] = useState(false);
 
   const handleOnMouseEnter = () => {

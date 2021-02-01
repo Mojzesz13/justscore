@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.scss';
+import Logo from '../../common/logo';
 import Hamburger from '../../common/hamburger';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
 import NavList from './NavList';
 
 const Navbar = ({
-  titleColor,
   showNavbar,
   setShowNavbar,
+  titleIsHovered,
   logoIsHovered,
   setLogoIsHovered,
   burgerIsHovered,
@@ -30,10 +29,10 @@ const Navbar = ({
     setPrevScrollPos(currentScrollPos);
 
     {
-      visible ? setLogoIsHovered(false) : setLogoIsHovered(true);
+      visible ? setLogoIsHovered(0) : setLogoIsHovered(2);
     }
     {
-      visible ? setBurgerIsHovered(false) : setBurgerIsHovered(true);
+      visible ? setBurgerIsHovered(2) : setBurgerIsHovered(1);
     }
   };
 
@@ -49,15 +48,23 @@ const Navbar = ({
         visible ? 'navbar-container ' : 'navbar-container active-navbar'
       }
     >
-      <Link to='/' className='navbar-container__logo'>
-        <Logo className={logoIsHovered ? 'logo active-logo' : 'logo'} />
-      </Link>
-      <div className='navbar-container__title' style={{ color: titleColor }}>
+      <Logo
+        showNavbar={showNavbar}
+        logoIsHovered={logoIsHovered}
+        setLogoIsHovered={setLogoIsHovered}
+      />
+      <div
+        className={
+          titleIsHovered
+            ? 'navbar-container__title active-title'
+            : 'navbar-container__title'
+        }
+      >
         Just Score
       </div>
       <div
         className='navbar-container__hamburger'
-        style={{  zIndex: '5 ' }}
+        //style={{  zIndex: '5 ' }}
       >
         <Hamburger
           className='icon'

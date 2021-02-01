@@ -2,7 +2,7 @@
 @import 'src/scss/settings/colors';
 
 .navList-Container {
-  width: 100vw;
+  width: 100%;
   height: 4rem;
   display: flex;
   justify-content: space-evenly;
@@ -41,7 +41,6 @@
   .navList-Container__decoration-bar {
     background-color: $hover-background-color;
     right: -100%;
-    transition: 1s;
     animation: hideNavbar 1s forwards;
     position: absolute;
     width: 100%;
@@ -57,7 +56,6 @@
       color: $hover-font-color;
       font-size: 1.5rem;
       z-index: 10;
-      margin-left: 5rem;
     }
   }
   .navList-Container__decoration-bar {
@@ -69,6 +67,9 @@
   0% {
     right: -100%;
   }
+  10% {
+    display: block;
+  }
   100% {
     right: 0;
   }
@@ -77,8 +78,22 @@
 @keyframes hideNavbar {
   0% {
     right: 0;
+
   }
   100% {
     right: -100%;
+    
+  }
+}
+
+@keyframes test {
+  0% {
+    display: block;
+  }
+  90% {
+    display: block;
+  }
+  100% {
+    display: none;
   }
 }
