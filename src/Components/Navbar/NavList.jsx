@@ -12,9 +12,13 @@ const navListItems = [
     name: 'Strony www',
     path: '/website',
   },
+  // {
+  //   name: 'Spacery wirtualne',
+  //   path: '/virtualTour',
+  // },
   {
-    name: 'Spacery wirtualne',
-    path: '/virtualTour',
+    name: 'Social Media',
+    path: '/socialMedia',
   },
   {
     name: 'Logo i identyfikacja wizualna',

@@ -50,10 +50,15 @@ const Header = ({
       onLeave: handleOnMouseLeaveLogo,
     },
     {
-      name: 'spacery wirtualne',
-      path: '/virtualTour',
+      name: 'social media',
+      path: '/socialMedia',
       img: sectionImg,
     },
+    // {
+    //   name: 'spacery wirtualne',
+    //   path: '/virtualTour',
+    //   img: sectionImg,
+    // },
     {
       name: 'logo i identyfikacja wizualna',
       path: '/virtualIdentification',

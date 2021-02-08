@@ -10,6 +10,7 @@ import LoadingPage from './LoadingPage/LoadingPage';
 import VirtualTour from './VirtualTour/VirtualTour';
 import VirtualIdentification from './VirtualIdentification/VirtualIdentification';
 import Website from './Website/Website';
+import SocialMedia from './SocialMedia/ScialMedia';
 
 function Main() {
   const [redirect, setRedirect] = useState(false);
@@ -59,6 +60,7 @@ function Main() {
             <Route path='/projects' component={Projects} />
             <Route path='/website' component={Website} />
             <Route path='/virtualTour' component={VirtualTour} />
+            <Route path='/socialMedia' component={SocialMedia} />
             <Route
               path='/virtualIdentification'
               component={VirtualIdentification}

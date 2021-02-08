@@ -59,9 +59,9 @@ const VirtualTour = () => {
   return (
     <>
       <Title titleText='nasze realizacje' />
-      <div className='virtualTour-container'>
+      <div className='virtual-tour-container'>
         {walkList.map((obj) => (
-          <div key={uuidv4()} className='virtualTour-container__content'>
+          <div key={uuidv4()} className='virtual-tour-container__content'>
             <div className='imgWalk'></div>
             <div className='title'>Spacey {obj.title} </div>
             <div className='text'>{obj.text}</div>
