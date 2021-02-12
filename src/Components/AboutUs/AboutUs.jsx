@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import './AboutUs.scss';
 import Title from '../../common/title';

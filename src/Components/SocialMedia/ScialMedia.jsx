@@ -1,9 +1,8 @@
-import React, { useRef } from 'react';
+import React  from 'react';
 import Title from '../../common/title';
 import { Parallax } from 'react-parallax';
 import img1 from '../../assets/offert1.jpg';
 import img2 from '../../assets/offert2.jpg';
-import img3 from '../../assets/offert3.jpg';
 
 const inlineStyle = {
   background: '#fff',

@@ -26,6 +26,12 @@ const Navbar = ({
         currentScrollPos < 10
     );
 
+
+ 
+
+
+
+
     setPrevScrollPos(currentScrollPos);
 
     {
