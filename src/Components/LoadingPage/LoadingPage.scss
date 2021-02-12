@@ -3,6 +3,7 @@
 .loadingPage-container {
   width: 100%;
   height: 100%;
+
   .loadingPage-container__main {
     width: 100%;
     height: 100%;
@@ -12,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: hiedeContainer 5s forwards;
     background-color: $hover-background-color;
     h1 {
       font-size: 3rem;
@@ -37,6 +39,15 @@
   }
   100% {
     width: 0;
+  }
+}
+
+@keyframes hiedeContainer {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
   }
 }
 

@@ -28,14 +28,12 @@ function Main() {
 
   return (
     <section className='main-container'>
-      {/* <LoadingPage />
-       <div
+      <LoadingPage />
+      <div
         className={
           redirect ? 'main-container__content show' : 'main-container__content '
         }
-      > 
-      */}
-      <div className='main-container__content show'>
+      >
         <Router>
           <Navbar
             showNavbar={showNavbar}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Navbar.scss';
 import Logo from '../../common/logo';
 import Hamburger from '../../common/hamburger';
@@ -16,8 +16,7 @@ const Navbar = ({
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  const handleScroll = (e) => {
-    e.preventDefault();
+  const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
 
     setVisible(
@@ -26,27 +25,20 @@ const Navbar = ({
         currentScrollPos < 10
     );
 
-
- 
-
-
-
-
     setPrevScrollPos(currentScrollPos);
-
     {
       visible ? setLogoIsHovered(0) : setLogoIsHovered(2);
     }
     {
       visible ? setBurgerIsHovered(2) : setBurgerIsHovered(1);
     }
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, visible, handleScroll]);
+  }, [prevScrollPos, handleScroll]);
 
   return (
     <nav

@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 import { v4 as uuidv4 } from 'uuid';
-import sectionImg from '../../assets/4.jpg';
+import bgImg1 from '../../assets/bg3.jpg';
+import bgImg2 from '../../assets/bg2.jpg';
+import bgImg3 from '../../assets/bg3.jpg';
+import bgImg4 from '../../assets/bg1.jpg';
+import bgImg5 from '../../assets/bg1.jpg';
 
 const Header = ({
   showNavbar,
@@ -45,14 +49,14 @@ const Header = ({
     {
       name: 'strony www',
       path: '/website',
-      img: sectionImg,
+      img: bgImg1,
       onEnter: handleOnMouseEnterLogo,
       onLeave: handleOnMouseLeaveLogo,
     },
     {
       name: 'social media',
       path: '/socialMedia',
-      img: sectionImg,
+      img: bgImg2,
     },
     // {
     //   name: 'spacery wirtualne',
@@ -62,19 +66,19 @@ const Header = ({
     {
       name: 'logo i identyfikacja wizualna',
       path: '/virtualIdentification',
-      img: sectionImg,
+      img: bgImg3,
       onEnter: handleOnMouseEnterTitle,
       onLeave: handleOnMouseLeaveTitle,
     },
     {
       name: 'o nas',
       path: '/aboutUs',
-      img: sectionImg,
+      img: bgImg1,
     },
     {
       name: 'kontakt',
       path: '/contact',
-      img: sectionImg,
+      img: bgImg5,
       onEnter: handleOnMouseEnterBurger,
       onLeave: handleOnMouseLeaveBurger,
     },

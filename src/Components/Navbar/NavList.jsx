@@ -30,7 +30,7 @@ const navListItems = [
   },
   {
     name: 'Kontakt',
-    path: '/',
+    path: '/contact',
   },
 ];
 
