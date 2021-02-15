@@ -10,7 +10,7 @@ import LoadingPage from './LoadingPage/LoadingPage';
 import VirtualTour from './VirtualTour/VirtualTour';
 import VirtualIdentification from './VirtualIdentification/VirtualIdentification';
 import Website from './Website/Website';
-import SocialMedia from './SocialMedia/ScialMedia';
+import SocialMedia from './SocialMedia/SocialMedia';
 
 function Main() {
   const [redirect, setRedirect] = useState(false);

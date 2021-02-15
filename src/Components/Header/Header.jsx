@@ -73,7 +73,7 @@ const Header = ({
     {
       name: 'o nas',
       path: '/aboutUs',
-      img: bgImg1,
+      img: bgImg4,
     },
     {
       name: 'kontakt',

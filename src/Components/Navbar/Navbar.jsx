@@ -32,7 +32,7 @@ const Navbar = ({
     {
       visible ? setBurgerIsHovered(2) : setBurgerIsHovered(1);
     }
-  }, []);
+  }, [visible]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

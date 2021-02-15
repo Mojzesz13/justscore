@@ -1,0 +1,52 @@
+.container-social-media {
+  .container-social-media__offert-container {
+    height: 40rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    .container-social-media__offert {
+      position: absolute;
+      top: 43%;
+      left: 43%;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .container-social-media__text {
+      position: absolute;
+      font-size: 1.5rem;
+      top: -300%;
+      left: -600%;
+      padding: 1.5rem;
+      width: 50rem;
+    }
+  }
+  .container-social-media__logo-container {
+    padding-top: 0.5rem;
+    padding-left: 48%;
+    border-top: 0.5px solid black;
+  }
+}
+
+.container-social-media__content-holder {
+  .container-social-media__owhite-bg {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 0.5px solid black;
+  }
+  &:hover {
+    .container-social-media__owhite-bg {
+      animation: whiteBackground 1s forwards;
+    }
+    @keyframes whiteBackground {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
